@@ -69,5 +69,7 @@
 # Waiting:       92  137  28.3    151     176
 # Total:        114  160  28.0    172     199#
 
+export API_URL=http://c26e8e58-7aff-4037-acd3-b3cb158bed78.southcentralus.azurecontainer.io/score
+export KEY=GQJucm3j8hX85iWpzngw9JUayCCUDEXH
 
- ab -n 10 -v 4 -p data.json -T 'application/json' -H 'Authorization: Bearer REPLACE_WITH_KEY' http://REPLACE_WITH_API_URL/score
+ab -n 10 -v 4 -p data.json -T "application/json" -H "Authorization: Bearer $KEY" $API_URL
